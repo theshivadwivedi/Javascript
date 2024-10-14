@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>keboard killer</h1>
+    <div class="local">
+        <div id="lode">
+            <div class="key">Press the key and see the magic
+            
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const bkl=document.getElementById('lode')
+    window.addEventListener('keydown',(e)=>{
+        bkl.innerHTML=`
+        <div class='key'>
+        <table>
+  <tr>
+    <th>key</th>
+    <th>keycode</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key === ' ' ? 'Space' : e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+  
+</table>
+</div>
+            
+        `;
+    })
+</script>
+</html>
